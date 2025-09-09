@@ -11,6 +11,7 @@ public interface IPersonRegistrationService
 public interface IPersonsAmountService
 {
     int ProcessPersonsAmount();
+    //Googo gaga
 }
 
 public interface IPersonPlacementService
