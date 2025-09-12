@@ -4,7 +4,7 @@ using PersonPlacementSystem.Animation;
 using PersonPlacementSystem.Places;
 using PersonPlacementSystem.Interfaces.PersonInterfaces;
 
-namespace PersonPlacementSystem.ProgramModes;
+namespace PersonPlacementSystem.ProgramModeManagement;
 
 public class ProgramModeManager
 {
@@ -32,7 +32,7 @@ public class ProgramModeManager
     {
         Console.WriteLine("Вы вошли в режим сортировки людей по времени...");
 
-        programState.PeopleCount = _personsAmountService.ProcessPersonsAmount();
+        programState.PeopleCount = _personsAmountService.ProcessPersonsAmount(debugMode);
 
         for (int i = 0; i < programState.PeopleCount; i++)
         {
@@ -54,7 +54,7 @@ public class ProgramModeManager
 
     public void ProcessPersonsPlaces(ProgramState programState, bool debugMode)
     {
-        programState.PeopleCount = _personsAmountService.ProcessPersonsAmount();
+        programState.PeopleCount = _personsAmountService.ProcessPersonsAmount(debugMode);
 
         _placeService.ProcessPlaces(programState, 2, debugMode);
     }

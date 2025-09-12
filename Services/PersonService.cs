@@ -171,32 +171,32 @@ public class PersonRegistrationService(ILogger logger, IValidatorService validat
     }
 }
 
-public class PersonCountService(ILogger logger) : IPersonsAmountService
+public class PersonCountService(ILogger logger, IValidatorService validator) : IPersonsAmountService
 {
     readonly ILogger _logger = logger;
+    readonly IValidatorService _validator = validator;
 
-    public int ProcessPersonsAmount()
+    public int ProcessPersonsAmount(bool debugMode = false)
     {
-        bool isCorrect = false;
-        int peopleCount = 0;
-        while (isCorrect == false)
-        {
-            Console.WriteLine("Введите количество человек");
-            string? peopleCountArg = Console.ReadLine();
+        Console.WriteLine("Введите количество человек");
+        _validator.ProcessInputValidation<int>(out int peopleCount, debugMode);
+        // while (isCorrect == false)
+        // {
+        //     string? peopleCountArg = Console.ReadLine();
 
-            //обработка кол-ва человек
-            if (!int.TryParse(peopleCountArg, out peopleCount))
-            {
-                _logger.PushError($"Возможно вы допустили ошибку в оформлении аргумента <<{peopleCountArg}>>, убедитесь, что ввод является натуральным числом!");
-                ConsoleLineAnimation.PlayAnimation("Перезапуск", ConsoleLineAnimation.AnimationType.Dots, 500, 1);
-            }
-            else
-            {
-                isCorrect = true;
-                Console.Clear();
-            }
+        //     //обработка кол-ва человек
+        //     if (!int.TryParse(peopleCountArg, out peopleCount))
+        //     {
+        //         _logger.PushError($"Возможно вы допустили ошибку в оформлении аргумента <<{peopleCountArg}>>, убедитесь, что ввод является натуральным числом!");
+        //         ConsoleLineAnimation.PlayAnimation("Перезапуск", ConsoleLineAnimation.AnimationType.Dots, 500, 1);
+        //     }
+        //     else
+        //     {
+        //         isCorrect = true;
+        //         Console.Clear();
+        //     }
 
-        }
+        // }
         return peopleCount;
     }
 }

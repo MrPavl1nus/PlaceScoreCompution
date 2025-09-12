@@ -3,7 +3,7 @@ using PersonPlacementSystem.Persons;
 using PersonPlacementSystem.State;
 using PersonPlacementSystem.Animation;
 using PersonPlacementSystem.ConsoleManagment;
-using PersonPlacementSystem.ProgramModes;
+using PersonPlacementSystem.ProgramModeManagement;
 using PersonPlacementSystem.Computation;
 using Microsoft.Extensions.DependencyInjection;
 using PersonPlacementSystem.Interfaces.PersonInterfaces;
@@ -56,13 +56,9 @@ public class ScoreCompution
         programModeManager = serviceProvider.GetRequiredService<ProgramModeManager>();
         personsPlacementService = serviceProvider.GetRequiredService<IPersonPlacementService>();
 
-        // programState.FirstProgramArgument = args.Length > 0 ? args[0] : null;
-        // isDebug = programState.FirstProgramArgument == "debug";
         isStartedWithArgument = args.Length > 0;
         isDebug = isStartedWithArgument && args[0] == "Debug";
         isSkipMode = isStartedWithArgument && args.Length > 1 && args[1] == "SkipAll";
-
-        // isSkipMode = programState.
 
         RunProgram(args);
     }
@@ -81,7 +77,7 @@ public class ScoreCompution
         Thread.Sleep(1000);
 
         Console.WriteLine($@"Выберите режим расчета: 
-        1 = PlaceBattle(На переработке. Не скоро)
+        1 = PlaceBattle(На переработке)
         2 = PlacesBattle
         3 = SortPersons");
 
@@ -104,8 +100,6 @@ public class ScoreCompution
                 break;
 
             case ProgramModeManager.ProgramMode.PlacesBattle:
-                // await ProcessPlacesAmount();
-
                 programModeManager!.ProcessPersonsPlaces(programState, isDebug);
 
                 break;

@@ -10,7 +10,7 @@ public interface IPersonRegistrationService
 
 public interface IPersonsAmountService
 {
-    int ProcessPersonsAmount();
+    int ProcessPersonsAmount(bool debugMode);
     //Googo gaga
 }
 

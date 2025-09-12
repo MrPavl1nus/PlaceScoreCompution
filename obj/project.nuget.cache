@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XNcaLGlkzMI=",
+  "dgSpecHash": "jaa15H5wAYo=",
   "success": true,
-  "projectFilePath": "/home/mrpavl1nus/Programs/for_yourself/PlaceScoreCompution/ScoreCompution.csproj",
+  "projectFilePath": "/home/mrpavl1nus/Programs/for_yourself/PersonPriorityComputation/PersonPriorityComputation.csproj",
   "expectedPackageFiles": [
     "/home/mrpavl1nus/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.8/microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
     "/home/mrpavl1nus/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.8/microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512"

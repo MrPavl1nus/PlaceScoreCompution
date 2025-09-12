@@ -112,11 +112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mrpavl1nus/Programs/for_yourself/PlaceScoreCompution/ScoreCompution.csproj",
-      "projectName": "ScoreCompution",
-      "projectPath": "/home/mrpavl1nus/Programs/for_yourself/PlaceScoreCompution/ScoreCompution.csproj",
+      "projectUniqueName": "/home/mrpavl1nus/Programs/for_yourself/PersonPriorityComputation/PersonPriorityComputation.csproj",
+      "projectName": "PersonPriorityComputation",
+      "projectPath": "/home/mrpavl1nus/Programs/for_yourself/PersonPriorityComputation/PersonPriorityComputation.csproj",
       "packagesPath": "/home/mrpavl1nus/.nuget/packages/",
-      "outputPath": "/home/mrpavl1nus/Programs/for_yourself/PlaceScoreCompution/obj/",
+      "outputPath": "/home/mrpavl1nus/Programs/for_yourself/PersonPriorityComputation/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mrpavl1nus/.nuget/NuGet/NuGet.Config"
